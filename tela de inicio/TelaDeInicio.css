@@ -1,109 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* Fonte principal */
-body {
+
+.font-sans {
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
 }
 
-/* Hero Section */
-.hero-bg {
-    background-image: url('/foto\ academia\ 2.jpeg');
-    background-size: cover;
-    background-position: center;
+.hero-section {
     position: relative;
+    padding-top: 80px; 
+}
+
+.hero-bg {
+    background-image: url('/foto\ academia\ 2.jpeg'); 
+    background-size: cover;
+    background-position: center bottom; 
+    background-repeat: no-repeat;
 }
 
 .hero-bg::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
-/* Header */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    background-color: white; 
+    transition: background-color 0.3s;
+    height: 80px; 
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #1e1e1e;
+    color: var(--lift-dark, #1e1e1e);
+    padding-left: 1rem;
 }
 
-/* Navegação */
-.header-nav a {
-    color: #232020;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-}
-
-.header-nav a:hover {
-    color: #000000;
-}
-
-/* Ícones sociais */
 .social-icon-link {
-    color: #000000;
-    transition: transform 0.2s ease, color 0.2s ease;
+    color: var(--lift-dark, #1e1e1e);
+    transition: color 0.3s;
 }
 
 .social-icon-link:hover {
-    color: #000000;
-    transform: scale(1.1);
+    color: var(--lift-primary, #ff0000);
 }
 
-/* Botão CTA */
 .cta-button {
     display: inline-flex;
     align-items: center;
-    background-color: #000000;
+    padding: 12px 30px 12px 24px;
+    background-color: var(--lift-primary, #000000);
     color: white;
-    padding: 0.75rem 2rem;
-    padding-left: 0.75rem;
-    border-radius: 9999px;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
+    border-radius: 9999px;
+    box-shadow: 0 8px 15px rgb(0, 0, 0);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    text-decoration: none;
     font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgb(0, 0, 0);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
+    background-color: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
 
 .cta-icon-circle {
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: var(--lift-primary, #000000);
     border-radius: 50%;
-    margin-right: 1rem;
+    margin-right: 12px;
 }
 
-/* Responsividade */
-@media (max-width: 640px) {
-    .main-slogan {
-        font-size: 3rem !important;
-    }
-    .main-slogan span {
-        font-size: 3.5rem !important;
-    }
-}
-
-/* Destaque do texto "Sobre" */
 .about-us-highlight {
-    color: #ff0000;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--lift-primary, #ff0000);
+}
+
+.main-slogan {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1023px) {
+    .hero-content {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        align-items: flex-start;
+        padding-top: 150px; 
+    }
 }

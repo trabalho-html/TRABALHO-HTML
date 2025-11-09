@@ -3,425 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - Planos Cia do Corpo</title>
-    <!-- Incluindo o CSS necessário diretamente para garantir a estilização --><style>
-        /* Estilos base (adaptados do seu CSS anterior para rodar em um único arquivo) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(to top left, #330000 0%, #CC0000 100%);
-            color: #333;
-            padding: 20px;
-        }
-
-        .payment-container {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            width: 100%;
-            max-width: 450px; 
-        }
-
-        /* Estilo para a logo */
-        .logo {
-            display: block; /* Garante que ocupe sua própria linha */
-            max-width: 150px; /* Tamanho máximo da logo */
-            margin: 0 auto 25px auto; /* Centraliza e adiciona margem inferior */
-        }
-
-        .payment-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #222;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #CC0000;
-            padding-bottom: 10px;
-        }
-
-        /* Seleção de Método */
-        .payment-method-selection {
-            display: flex;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #CC0000;
-        }
-
-        .payment-method-selection input[type="radio"] {
-            display: none;
-        }
-
-        .payment-method-selection label {
-            flex: 1;
-            text-align: center;
-            padding: 12px 0;
-            cursor: pointer;
-            background-color: #f8f8f8;
-            color: #CC0000;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .payment-method-selection input[type="radio"]:checked + label {
-            background-color: #CC0000;
-            color: white;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Campos do Formulário */
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 600;
-            color: #555;
-            font-size: 0.95rem;
-        }
-        
-        /* Estilo para inputs e o novo select */
-        input:not([type="radio"]), select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            /* Estilo específico para o select */
-            background-color: #f5f5f5;
-            font-weight: bold;
-            appearance: none;
-            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            padding-right: 40px;
-        }
-
-        input:focus, select:focus {
-            border-color: #CC0000;
-            box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
-            outline: none;
-        }
-
-        .card-details {
-            display: flex;
-            gap: 15px;
-        }
-
-        .card-details .form-group {
-            flex: 1;
-        }
-
-        .payment-fields {
-            display: none;
-        }
-
-        .payment-fields.active {
-            display: block;
-        }
-
-        .btn-pay {
-            width: 100%;
-            padding: 14px;
-            margin-top: 20px;
-            background-image: linear-gradient(to right, #CC0000, #990000);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s, transform 0.1s;
-            box-shadow: 0 4px 10px rgba(204, 0, 0, 0.3);
-        }
-
-        .btn-pay:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
-
-        /* Estilos Pix */
-        .info-box {
-            background-color: #fff0f0;
-            border: 1px solid #CC0000;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .info-box h3 {
-            color: #CC0000;
-            margin-bottom: 10px;
-        }
-
-        .pix-code {
-            font-weight: bold;
-            font-size: 1.1rem;
-            word-break: break-all;
-            display: block;
-            margin: 15px 0;
-            color: #333;
-        }
-        
-        /* Placeholder para QR Code */
-        .qr-code-image {
-            width: 150px;
-            height: 150px;
-            display: block; 
-            margin: 15px auto;
-            border: 1px solid #eee; 
-            border-radius: 5px; 
-            object-fit: contain; 
-        }
-
-        .security-info {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 0.85rem;
-            color: #777;
-        }
-    </style>
+    <title>Finalizar Pagamento</title>
+    <link rel="stylesheet" href="/tela pagamento/Tela de pagamento.css">
 </head>
 <body>
 
     <div class="payment-container">
-        <!-- Adição da logo --><img src="/CIA DO CORPO FOTO.jpg" alt="Logo da Empresa" class="logo">
-
-        <h2>Confirmação de Pagamento</h2>
-
-        <div class="form-group">
-            <label for="plan-select">Plano Selecionado</label>
-            <select id="plan-select">
-                <option value="Plano Básico" data-price="80.00">Plano Básico - R$ 80,00</option>
-                <option value="Plano Premium" data-price="120.00">Plano Premium - R$ 120,00</option>
-                <option value="Plano Familia" data-price="350.00">Plano Família - R$ 350,00</option>
-            </select>
-            </div>
+        <h2>Selecione o Método de Pagamento</h2>
 
         <div class="payment-method-selection">
-            <input type="radio" id="method-credit" name="payment-method" value="credit" checked>
-            <label for="method-credit">Cartão</label>
+            <input type="radio" id="card-option" name="payment-method" value="card" checked>
+            <label for="card-option">Cartão de Crédito</label>
+            <input type="radio" id="pix-option" name="payment-method" value="pix">
+            <label for="pix-option">Pix</label>
+        </div>
 
-            <input type="radio" id="method-pix" name="payment-method" value="pix">
-            <label for="method-pix">Pix</label>
+        <div id="card-fields" class="payment-fields active">
+            <div class="form-group">
+                <label for="card-number">Número do Cartão</label>
+                <input type="text" id="card-number" placeholder="0000 0000 0000 0000" required maxlength="19">
+            </div>
+            <div class="form-group">
+                <label for="card-name">Nome Impresso no Cartão</label>
+                <input type="text" id="card-name" placeholder="Nome Completo" required maxlength="50">
+            </div>
+            <div class="card-details">
+                <div class="form-group">
+                    <label for="card-expiry">Validade</label>
+                    <input type="text" id="card-expiry" placeholder="MM/AA" required maxlength="5">
+                </div>
+                <div class="form-group">
+                    <label for="card-cvv">CVV</label>
+                    <input type="tel" id="card-cvv" placeholder="123" required maxlength="4">
+                </div>
+            </div>
+            <div class="form-group">
+                </div>
+            <button class="btn-pay">PAGAR COM CARTÃO</button>
+        </div>
+
+        <div id="pix-fields" class="payment-fields">
+            <div class="info-box">
+                <h3>Escaneie para Pagar</h3>
+                <p>Valor total: R$ 100,00</p>
+                <img src="/qrcode-pix.png" alt="QR Code Pix" class="qr-code-image">
+                <p>Ou copie a chave Pix:</p>
+                <span id="pix-code-value" style="display:none;">81987488122</span>
+                <p>+55 81 ****-8122</p>
+                
+                <button class="btn-pay" onclick="copyPixCode(this)">COPIAR CHAVE PIX</button>
+            </div>
+            <p class="security-info">Aguardando confirmação do pagamento.</p>
         </div>
         
-        <form class="payment-form" onsubmit="handlePayment(event)">
-            
-            <div id="credit-card-fields" class="payment-fields active">
-                <div class="form-group">
-                    <label for="name">Nome Impresso no Cartão</label>
-                    <input type="text" id="name" name="name" placeholder="Ex: JOAO DA SILVA" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cardNumber">Número do Cartão</label>
-                    <input 
-                        type="text" 
-                        id="cardNumber" 
-                        name="cardNumber" 
-                        placeholder="0000 0000 0000 0000" 
-                        maxlength="19" 
-                        pattern="\d{4} \d{4} \d{4} \d{4}" 
-                        title="O número do cartão deve ter 16 dígitos" 
-                        required>
-                </div>
-
-                <div class="card-details">
-                    <div class="form-group">
-                        <label for="expiry">Validade (MM/AA)</label>
-                        <input 
-                            type="text" 
-                            id="expiry" 
-                            name="expiry" 
-                            placeholder="MM/AA" 
-                            maxlength="5" 
-                            pattern="(0[1-9]|1[0-2])\/\d{2}" 
-                            title="Formato: MM/AA" 
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cvv">CVV</label>
-                        <input 
-                            type="text" 
-                            id="cvv" 
-                            name="cvv" 
-                            placeholder="123" 
-                            maxlength="4" 
-                            pattern="\d{3,4}" 
-                            title="3 ou 4 dígitos no verso do cartão" 
-                            required>
-                    </div>
-                </div>
-            </div>
-
-            <div id="pix-info" class="payment-fields">
-                <div class="info-box">
-                    <h3>Pagar com Pix</h3>
-                    <p>Escaneie o QR Code abaixo com o aplicativo do seu banco ou copie a chave Pix.</p>
-                    
-                    <img src="/qrcode-pix.png" alt="QR Code Pix" class="qr-code-image">
-                    
-                    <span class="pix-code">81987488122</span>
-                    <button type="button" class="btn-pay" style="margin-top: 10px;" onclick="copyPixCode()">Copiar Chave Pix</button>
-                    <p style="margin-top: 15px; color: #000000;">Vencimento em 10 minutos.</p>
-                </div>
-            </div>
-            
-            <button type="submit" id="main-submit-btn" class="btn-pay">Pagar com Cartão</button>
-        </form>
-
-        <div class="security-info">
-            <p>Seus dados estão 100% seguros. Pagamento criptografado.</p>
-        </div>
     </div>
 
     <script>
-        const form = document.querySelector('.payment-form');
-        const submitBtn = document.getElementById('main-submit-btn');
-        const methodRadios = document.querySelectorAll('input[name="payment-method"]');
-        const planSelect = document.getElementById('plan-select'); // Referência ao novo select
-        
-        const fieldContainers = {
-            'credit': document.getElementById('credit-card-fields'),
-            'pix': document.getElementById('pix-info')
-        };
+        // Lógica para alternar os campos (já existente)
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioButtons = document.querySelectorAll('input[name="payment-method"]');
+            const cardFields = document.getElementById('card-fields');
+            const pixFields = document.getElementById('pix-fields');
 
-        function switchPaymentMethod(method) {
-            Object.keys(fieldContainers).forEach(key => {
-                const container = fieldContainers[key];
-                container.classList.remove('active');
-                // Remove 'required' de todos os campos ao trocar
-                container.querySelectorAll('input').forEach(input => {
-                    input.removeAttribute('required');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    cardFields.classList.remove('active');
+                    pixFields.classList.remove('active');
+
+                    if (this.value === 'card') {
+                        cardFields.classList.add('active');
+                    } else if (this.value === 'pix') {
+                        pixFields.classList.add('active');
+                    }
                 });
             });
+        });
 
-            const activeContainer = fieldContainers[method];
-            if (activeContainer) {
-                activeContainer.classList.add('active');
-                if (method === 'credit') {
-                    // Adiciona 'required' apenas nos campos do cartão quando o método é crédito
-                    document.getElementById('name').setAttribute('required', 'required');
-                    document.getElementById('cardNumber').setAttribute('required', 'required');
-                    document.getElementById('expiry').setAttribute('required', 'required');
-                    document.getElementById('cvv').setAttribute('required', 'required');
-                }
-            }
+        // ----------------------------------------------------
+        // NOVA FUNÇÃO PARA COPIAR O CÓDIGO PIX
+        // ----------------------------------------------------
+        function copyPixCode(buttonElement) {
+            const pixCodeElement = document.getElementById('pix-code-value');
+            const codeToCopy = pixCodeElement.textContent || pixCodeElement.innerText;
             
-            // Atualiza o texto do botão de submissão
-            switch (method) {
-                case 'credit':
-                    submitBtn.textContent = 'Pagar com Cartão';
-                    break;
-                case 'pix':
-                    submitBtn.textContent = 'Pagar com Pix';
-                    break;
-            }
-        }
-        
-        methodRadios.forEach(radio => {
-            radio.addEventListener('change', (e) => switchPaymentMethod(e.target.value));
-        });
-
-        // Event listener para mostrar no console qual plano foi selecionado
-        planSelect.addEventListener('change', function() {
-            const selectedOption = this.options[this.selectedIndex];
-            const planName = selectedOption.value;
-            const planPrice = selectedOption.getAttribute('data-price');
-            
-            console.log(`Plano selecionado: ${planName} (R$ ${planPrice})`);
-            // Opcional: Você pode atualizar um resumo de pagamento aqui se necessário.
-        });
-
-
-        // Inicia com o método de crédito selecionado
-        switchPaymentMethod('credit'); 
-
-        // Formatação do Número do Cartão
-        document.getElementById('cardNumber').addEventListener('input', function(e) {
-            e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
-        });
-
-        // Formatação da Validade (MM/AA)
-        document.getElementById('expiry').addEventListener('input', function(e) {
-            let input = e.target.value.replace(/[^\d]/g, '');
-            if (input.length > 2) {
-                input = input.substring(0, 2) + '/' + input.substring(2, 4);
-            }
-            e.target.value = input;
-        });
-        
-        // Função para Copiar o Código Pix
-        function copyPixCode() {
-            const pixCode = document.querySelector('.pix-code').textContent;
-            
-            // Usando document.execCommand('copy') como fallback para iframes
-            if (document.execCommand('copy')) {
-                 const textarea = document.createElement('textarea');
-                 textarea.value = pixCode;
-                 document.body.appendChild(textarea);
-                 textarea.select();
-                 document.execCommand('copy');
-                 document.body.removeChild(textarea);
-
-                 const originalText = document.querySelector('#pix-info .btn-pay').textContent;
-                 document.querySelector('#pix-info .btn-pay').textContent = 'Chave Copiada! ✅'; 
-                 setTimeout(() => {
-                     document.querySelector('#pix-info .btn-pay').textContent = originalText;
-                 }, 1500);
-
+            // Usa a API Clipboard moderna
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(codeToCopy).then(() => {
+                    // Feedback visual temporário
+                    const originalText = buttonElement.textContent;
+                    buttonElement.textContent = "Copiado!";
+                    setTimeout(() => {
+                        buttonElement.textContent = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Falha ao copiar:', err);
+                    alert('Erro ao copiar o código. Tente manualmente: ' + codeToCopy);
+                });
             } else {
-                console.error('Falha ao copiar usando execCommand.');
-                const fallbackMessage = document.createElement('div');
-                fallbackMessage.style.cssText = 'position:fixed; top:20px; right:20px; background:#CC0000; color:white; padding:10px; border-radius:5px; z-index:9999;';
-                fallbackMessage.textContent = 'Erro ao copiar. Copie manualmente: ' + pixCode;
-                document.body.appendChild(fallbackMessage);
-                setTimeout(() => document.body.removeChild(fallbackMessage), 3000);
+                // Alternativa para navegadores mais antigos (menos comum hoje)
+                const tempInput = document.createElement('input');
+                tempInput.value = codeToCopy;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                alert('Chave Pix copiada (Alternativa)!');
             }
         }
-        
-        // Função de Submissão
-        function handlePayment(e) {
-            e.preventDefault();
-            const selectedMethod = document.querySelector('input[name="payment-method"]:checked').value;
-            const selectedPlanText = planSelect.options[planSelect.selectedIndex].text;
-
-            const feedbackText = {
-                'credit': `Pagamento do ${selectedPlanText} via Cartão Enviado com Sucesso!`,
-                'pix': `Aguardando pagamento Pix do ${selectedPlanText}. Você será notificado por e-mail.`
-            };
-            
-            const message = feedbackText[selectedMethod] || 'Processando pagamento...';
-            
-            // Criação do Modal de Feedback
-            const modal = document.createElement('div');
-            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center; z-index: 1000;';
-            modal.innerHTML = `
-                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; max-width: 90%; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <h3 style="color: #CC0000; margin-bottom: 15px;">Atenção!</h3>
-                    <p style="color: #333;">${message}</p>
-                    <button onclick="document.body.removeChild(this.parentNode.parentNode)" style="margin-top: 20px; padding: 10px 20px; background-color: #CC0000; color: white; border: none; border-radius: 5px; cursor: pointer;">Fechar</button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        window.copyPixCode = copyPixCode;
     </script>
 </body>
 </html>
