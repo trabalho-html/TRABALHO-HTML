@@ -23,9 +23,9 @@ Estilização: Aplicação de [Ex: Variáveis CSS, Metodologia BEM, Pré-process
 
 Este projeto é simples de ser visualizado, pois não requer instalação de dependências ou servidor.
 
-Pré-requisitos
-Um navegador web moderno (Ex: Chrome, Firefox, Edge).
-
-Um editor de código (Ex: VS Code) para visualização e edição.
+Utilizaçao
+-Pré-requisitos
+-Um navegador web moderno (Ex: Chrome, Firefox, Edge).
+-Um editor de código (Ex: VS Code) para visualização e edição.
  
 
