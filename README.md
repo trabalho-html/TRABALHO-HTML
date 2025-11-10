@@ -3,17 +3,20 @@ Repositório: TRABALHO-HTML
 Autor: Kauã Vitor e Vinicius Souza
 
 
-1.	Visão Geral
-O projeto CIA Academia é uma aplicação web desenvolvida com HTML e CSS e Font. Seu objetivo é apresentar a academia, seus valores, unidades e planos de forma moderna, responsiva e visualmente atraente. A aplicação possui páginas como tela inicial, cadastro, planos e tela pagamento, todas interligadas por navegação simples.
+Introdução
 
+ Objetivo do Documento
+Este documento serve como referência técnica e guia para a compreensão, desenvolvimento e manutenção do website institucional estático da academia [Nome da Academia].
 
-2.	Tecnologias Utilizadas
-- HTML para a estrutura da página e CSS para estilização responsiva e moderna.
+ Visão Geral do Projeto
+O website é uma plataforma de apresentação de informações (marketing/institucional), utilizando apenas HTML5 e CSS3 para estrutura e estilo. Não possui funcionalidades dinâmicas que requerem Back-end (ex: autenticação de usuários, banco de dados ou agendamento de aulas em tempo real).
 
+1.3. Tecnologias Principais
+Marcação: HTML5
 
-3.	Estrutura do Projeto
-O repositório contém pastas e arquivos organizados conforme as telas da aplicação:tela de inicio, tela de cadastro, tela de planos, tela de pagamento e entre outros. 
+Estilização: CSS3
 
+Metodologia CSS: BEM (Block, Element, Modifier)
 
-4.	Layout e Design
-O design segue uma estética limpa e moderna, com destaque para cores personalizadas:como o vermelho, branco e o preto. O slogan principal “Seja Mais, Seja CIA!” é apresentado em destaque na Tela de inicio, com botões de ação que direcionam o usuário ao cadastro.
+2. Estrutura do Projeto e Arquivos
+A organização de arquivos segue o padrão modular para facilitar a localização de assets e a separação de responsabilidades.
