@@ -1,19 +1,31 @@
-Projeto: CIA Academia 
-Repositório: TRABALHO-HTML 
-Autor: Kauã Vitor e Vinicius Souza
+Projeto: # 🏋️‍♂️ CIA DO CORPO - Academia Fitness
+
+<p align="center">
+  <img src="CIA%20DO%20CORPO%20FOTO.jpg" alt="Logo da Academia" width="350" style="border-radius: 0; border: none;" />
+</p>
 
 
-1.	Visão Geral
-O projeto CIA Academia é uma aplicação web desenvolvida com HTML e CSS e Font. Seu objetivo é apresentar a academia, seus valores, unidades e planos de forma moderna, responsiva e visualmente atraente. A aplicação possui páginas como tela inicial, cadastro, planos e tela pagamento, todas interligadas por navegação simples.
+💡 Sobre o Projeto
+O **CIA DO CORPO** é um projeto de site para academia, desenvolvido com o objetivo de oferecer uma plataforma moderna, prática e acessível para alunos e novos clientes.  
+O site conta com páginas dedicadas a **planos, treinos, métodos de pagamento e área do aluno**, tornando a experiência do usuário mais completa e intuitiva.
 
 
-2.	Tecnologias Utilizadas
-- HTML para a estrutura da página e CSS para estilização responsiva e moderna.
+🚀 Tecnologias Utilizadas
+- **HTML5** → estrutura e conteúdo das páginas  
+- **CSS3** → estilização e layout responsivo  
+Foco Técnico:
 
+HTML: Estrutura semântica (uso correto de <header>, <main>, <section>, etc.).
 
-3.	Estrutura do Projeto
-O repositório contém pastas e arquivos organizados conforme as telas da aplicação:tela de inicio, tela de cadastro, tela de planos, tela de pagamento e entre outros. 
+CSS: Design responsivo utilizando Flexbox e/ou Grid Layout.
 
+Estilização: Aplicação de [Ex: Variáveis CSS, Metodologia BEM, Pré-processadores como SASS (se aplicável)].
 
-4.	Layout e Design
-O design segue uma estética limpa e moderna, com destaque para cores personalizadas:como o vermelho, branco e o preto. O slogan principal “Seja Mais, Seja CIA!” é apresentado em destaque na Tela de inicio, com botões de ação que direcionam o usuário ao cadastro.
+Este projeto é simples de ser visualizado, pois não requer instalação de dependências ou servidor.
+
+Utilizaçao
+-Pré-requisitos
+-Um navegador web moderno (Ex: Chrome, Firefox, Edge).
+-Um editor de código (Ex: VS Code) para visualização e edição.
+ 
+
