@@ -1,9 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="CIA DO CORPO FOTO.jpg">
+
     <link rel="stylesheet" href="/Tela de pagamento.css">
 </head>
 <body>
@@ -25,6 +28,7 @@
             <p>Aguardando pagamento...</p>
         </div>
     </div>
+
     <script>
         const btnPayPix = document.getElementById('btn-pay-pix');
         const waitingOverlay = document.getElementById('waiting-overlay');
@@ -32,8 +36,8 @@
         btnPayPix.addEventListener('click', () => {
             waitingOverlay.style.display = 'flex';
         });
-
     </script>
 
 </body>
 </html>
+
