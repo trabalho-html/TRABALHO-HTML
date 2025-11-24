@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,44 +18,6 @@
             <span id="pix-code-value" class="pix-code">81987488122</span>
             <button class="btn-pay" id="btn-pay-pix">PAGAR COM PIX</button>
         </div>
-
-        <div id="card-fields" class="payment-fields active">
-            <div class="form-group">
-                <label for="card-number">Número do Cartão</label>
-                <input type="text" id="card-number" placeholder="0000 0000 0000 0000" required maxlength="19">
-            </div>
-            <div class="form-group">
-                <label for="card-name">Nome Impresso no Cartão</label>
-                <input type="text" id="card-name" placeholder="Nome Completo" required maxlength="50">
-            </div>
-            <div class="card-details">
-                <div class="form-group">
-                    <label for="card-expiry">Validade</label>
-                    <input type="text" id="card-expiry" placeholder="MM/AA" required maxlength="5">
-                </div>
-                <div class="form-group">
-                    <label for="card-cvv">CVV</label>
-                    <input type="tel" id="card-cvv" placeholder="123" required maxlength="4">
-                </div>
-            </div>
-            <div class="form-group">
-                </div>
-            <button class="btn-pay">PAGAR COM CARTÃO</button>
-        </div>
-
-        <div id="pix-fields" class="payment-fields">
-            <div class="info-box">
-                <h3>Escaneie para Pagar</h3>
-                <p>Valor total: R$ 150,00</p>
-                <img src="/qrcode-pix.png" alt="QR Code Pix" class="qr-code-image">
-                <p>Ou copie a chave Pix:</p>
-                <span id="pix-code-value" style="display:none;">81987488122</span>
-                
-                <button class="btn-pay" onclick="copyPixCode(this)">COPIAR CHAVE PIX</button>
-            </div>
-            <p class="security-info">Aguardando confirmação do pagamento.</p>
-        </div>
-        
     </div>
 
     <div id="waiting-overlay">
