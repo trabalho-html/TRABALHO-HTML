@@ -5,87 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos CIA DO CORPO</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Configuração de Cores Customizadas e Fonte -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'black-main': '#1a1a1a',
-                        'white-text': '#f5f5f5',
-                        'gray-medium': '#a0a0a0',
-                        'red-accent': '#e31e24',
-                        'red-dark': '#b0181c',
-                        'card-bg': '#2c2c2c',
-                        'card-border': '#4a4a4a',
-                        'totalpass-green': '#28a745',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
-    <!-- Ícones FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- CSS externo -->
     <link rel="stylesheet" href="planos.css">
 </head>
 
-<body class="text-white-text min-h-screen flex flex-col">
+<body class="bg-black text-white min-h-screen flex flex-col">
 
-    <!-- Cabeçalho -->
-    <header class="header-bg py-8 md:py-12 flex flex-col items-center justify-center text-center relative z-10">
-        <div class="mb-6">
-            <h1 class="text-white-text text-4xl md:text-5xl font-black uppercase tracking-wider main-logo">
-                CIA DO CORPO
-            </h1>
-        </div>
+    <header class="py-8 md:py-12 flex flex-col items-center justify-center text-center">
+        <h1 class="text-4xl md:text-5xl font-black uppercase tracking-wider">CIA DO CORPO</h1>
     </header>
 
-    <!-- Conteúdo principal -->
-    <main class="flex-grow container mx-auto px-4 py-12 md:py-16 relative z-10 main-content-overlay">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12 justify-center items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12 p-6">
 
-            <!-- Plano Básico -->
-            <div class="price-card p-6 md:p-8 flex flex-col items-center text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4 text-white-text">BÁSICO</h3>
-                <p class="text-gray-medium text-sm mb-2">Valor:</p>
-                <p class="text-white-text text-4xl md:text-5xl font-extrabold mb-6">R$ 100,00</p>
-                <a href="/basico.html" class="total-pass-button text-center">TOTAL PASS</a>
-            </div>
-
-            <!-- Plano Família -->
-            <div class="price-card p-6 md:p-8 flex flex-col items-center text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4 text-white-text">FAMÍLIA</h3>
-                <p class="text-gray-medium text-sm mb-2">Valor:</p>
-                <p class="text-white-text text-4xl md:text-5xl font-extrabold mb-6">R$ 350,00</p>
-                <a href="/familia.html" class="total-pass-button text-center">TOTAL PASS</a>
-            </div>
-
-            <!-- Plano Premium -->
-            <div class="price-card p-6 md:p-8 flex flex-col items-center text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4 text-white-text">PREMIUM</h3>
-                <p class="text-gray-medium text-sm mb-2">Valor:</p>
-                <p class="text-white-text text-4xl md:text-5xl font-extrabold mb-6">R$ 150,00</p>
-                <a href="/premium.html" class="total-pass-button text-center">TOTAL PASS</a>
-            </div>
-
+        <div class="plano-box bg-neutral-900 border border-neutral-700 rounded-xl flex flex-col items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">BÁSICO</h3>
+            <p class="text-neutral-400 text-sm mb-2">Valor:</p>
+            <p class="text-4xl md:text-5xl font-extrabold mb-6">R$ 100,00</p>
+            <a href="/basico.html" class="bg-green-500 hover:bg-green-600 text-black font-bold px-4 py-2 rounded-md">TOTAL PASS</a>
         </div>
-    </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-black-main py-8 md:py-12 text-gray-medium text-center relative z-10">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <p class="text-white-text text-sm">© 2018 CIA DO CORPO - Todos os direitos reservados.</p>
+        <div class="plano-box bg-neutral-900 border border-neutral-700 rounded-xl flex flex-col items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">FAMÍLIA</h3>
+            <p class="text-neutral-400 text-sm mb-2">Valor:</p>
+            <p class="text-4xl md:text-5xl font-extrabold mb-6">R$ 350,00</p>
+            <a href="/familia.html" class="bg-green-500 hover:bg-green-600 text-black font-bold px-4 py-2 rounded-md">TOTAL PASS</a>
         </div>
-    </footer>
+
+        <div class="plano-box bg-neutral-900 border border-neutral-700 rounded-xl flex flex-col items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">PREMIUM</h3>
+            <p class="text-neutral-400 text-sm mb-2">Valor:</p>
+            <p class="text-4xl md:text-5xl font-extrabold mb-6">R$ 150,00</p>
+            <a href="/premium.html" class="bg-green-500 hover:bg-green-600 text-black font-bold px-4 py-2 rounded-md">TOTAL PASS</a>
+        </div>
+
+    </div>
 
 </body>
 </html>

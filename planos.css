@@ -1,38 +1,31 @@
-/* Fundo geral com imagem */
 body {
     font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    background-image: url('/foto\ academia.jpg');
+    background-image: url('/foto academia.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
-/* Cabeçalho */
-.header-bg {
-    background-color: rgba(26, 26, 26, 0.95);
-    background-repeat: no-repeat;
-    background-position: center top 20px;
-    padding-top: 100px;
-}
-
-/* Cards de preço */
-.price-card {
+.plano-box {
+    height: 380px;
+    padding: 20px;
     background-color: rgba(44, 44, 44, 0.9);
     border: 1px solid #4a4a4a;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.price-card:hover {
+.plano-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Botão Total Pass */
 .total-pass-button {
     background-color: #28a745;
     color: white;
@@ -45,19 +38,4 @@ body {
 
 .total-pass-button:hover {
     background-color: #218838;
-}
-
-/* Texto do rodapé */
-.footer-logo-text {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #f5f5f5;
-    margin-top: 1rem;
-}
-
-/* Responsividade */
-@media (max-width: 767px) {
-    .header-bg {
-        padding-top: 80px;
-    }
 }
