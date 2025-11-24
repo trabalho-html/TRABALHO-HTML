@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Pagamento</title>
     <link rel="stylesheet" href="/Tela de pagamento.css">
 </head>
 <body>
 
     <div class="payment-container">
-        <h2>Selecione o Método de Pagamento</h2>
-
-        <div class="payment-method-selection">
-            <input type="radio" id="card-option" name="payment-method" value="card" checked>
-            <label for="card-option">Cartão de Crédito</label>
-            <input type="radio" id="pix-option" name="payment-method" value="pix">
-            <label for="pix-option">Pix</label>
+        <h2>Pagamento via Pix</h2>
+        <div class="info-box">
+            <h3>Escaneie para Pagar</h3>
+            <p>Valor total: R$ 100,00</p>
+            <img src="/qrcode-pix.png" alt="QR Code Pix" class="qr-code-image">
+            <p>Ou copie a chave Pix:</p>
+            <span id="pix-code-value" class="pix-code">81987488122</span>
+            <button class="btn-pay" id="btn-pay-pix">PAGAR COM PIX</button>
         </div>
 
         <div id="card-fields" class="payment-fields active">
@@ -57,59 +57,20 @@
         
     </div>
 
+    <div id="waiting-overlay">
+        <div class="waiting-box">
+            <p>Aguardando pagamento...</p>
+        </div>
+    </div>
     <script>
-        // Lógica para alternar os campos (já existente)
-        document.addEventListener('DOMContentLoaded', function() {
-            const radioButtons = document.querySelectorAll('input[name="payment-method"]');
-            const cardFields = document.getElementById('card-fields');
-            const pixFields = document.getElementById('pix-fields');
+        const btnPayPix = document.getElementById('btn-pay-pix');
+        const waitingOverlay = document.getElementById('waiting-overlay');
 
-            radioButtons.forEach(radio => {
-                radio.addEventListener('change', function() {
-                    cardFields.classList.remove('active');
-                    pixFields.classList.remove('active');
-
-                    if (this.value === 'card') {
-                        cardFields.classList.add('active');
-                    } else if (this.value === 'pix') {
-                        pixFields.classList.add('active');
-                    }
-                });
-            });
+        btnPayPix.addEventListener('click', () => {
+            waitingOverlay.style.display = 'flex';
         });
 
-        // ----------------------------------------------------
-        // NOVA FUNÇÃO PARA COPIAR O CÓDIGO PIX
-        // ----------------------------------------------------
-        function copyPixCode(buttonElement) {
-            const pixCodeElement = document.getElementById('pix-code-value');
-            const codeToCopy = pixCodeElement.textContent || pixCodeElement.innerText;
-            
-            // Usa a API Clipboard moderna
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(codeToCopy).then(() => {
-                    // Feedback visual temporário
-                    const originalText = buttonElement.textContent;
-                    buttonElement.textContent = "Copiado!";
-                    setTimeout(() => {
-                        buttonElement.textContent = originalText;
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Falha ao copiar:', err);
-                    alert('Erro ao copiar o código. Tente manualmente: ' + codeToCopy);
-                });
-            } else {
-                // Alternativa para navegadores mais antigos (menos comum hoje)
-                const tempInput = document.createElement('input');
-                tempInput.value = codeToCopy;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-                
-                alert('Chave Pix copiada (Alternativa)!');
-            }
-        }
     </script>
+
 </body>
 </html>
