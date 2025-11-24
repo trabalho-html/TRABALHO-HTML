@@ -10,7 +10,7 @@ O **CIA DO CORPO** é um projeto de site para academia, desenvolvido com o objet
 O site conta com páginas dedicadas a **planos, treinos, métodos de pagamento e área do aluno**, tornando a experiência do usuário mais completa e intuitiva.
 
 
-🚀 Tecnologias Utilizadas
+ Tecnologias Utilizadas
 - **HTML5** → estrutura e conteúdo das páginas  
 - **CSS3** → estilização e layout responsivo  
 Foco Técnico:
