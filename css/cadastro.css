@@ -1,11 +1,11 @@
 /* Fundo geral */
 body {
-    background-image: url('/foto\ academia.jpg'); 
+    background-image: url('/foto\ academia\ 3.jpg'); 
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #1e1e1e;
+    background-color: #000000;
     font-family: 'Inter', sans-serif;
     color: white;
     margin: 0;
@@ -48,7 +48,7 @@ body {
 
 /* Caixa do formulário */
 .form-box {
-    background-color: #2b2b2b;
+    background-color: #070707;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -63,19 +63,19 @@ body {
     border: none;
     outline: none;
     font-size: 16px;
-    background-color: #3a3a3a;
+    background-color: #ffffff;
     color: white;
 }
 
 .form-field::placeholder {
-    color: #bbbbbb;
+    color: #686868;
 }
 
 /* Botão */
 .btn-enviar {
     display: inline-block;
     width: 100%;
-    background-color: #e31e24;
+    background-color: #ff2e35;
     text-align: center;
     padding: 14px;
     font-weight: bold;
