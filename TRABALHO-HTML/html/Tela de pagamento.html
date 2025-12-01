@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="CIA DO CORPO FOTO.jpg">
+
+    <link rel="stylesheet" href="/css/Tela de pagamento.css">
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Pagamento via Pix</h2>
+        <div class="info-box">
+            <h3>Escaneie para Pagar</h3>
+            <p>Valor total: R$ 100,00</p>
+            <img src="/qrcode-pix.png" alt="QR Code Pix" class="qr-code-image">
+            <p>Ou copie a chave Pix:</p>
+            <span id="pix-code-value" class="pix-code">81987488122</span>
+         href    <button class="btn-pay" id="btn-pay-pix">PAGAR COM PIX</button>
+        </div>
+    </div>
+
+    <div id="waiting-overlay">
+        <div class="waiting-box">
+            <p>Aguardando pagamento...</p>
+        </div>
+    </div>
+
+    <script>
+        const btnPayPix = document.getElementById('btn-pay-pix');
+        const waitingOverlay = document.getElementById('waiting-overlay');
+
+        btnPayPix.addEventListener('click', () => {
+            waitingOverlay.style.display = 'flex';
+        });
+    </script>
+
+</body>
+</html>
+
