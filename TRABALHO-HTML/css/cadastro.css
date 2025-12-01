@@ -7,7 +7,7 @@ body {
     background-attachment: fixed;
     background-color: #000000;
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 0;
 }
 
@@ -64,11 +64,11 @@ body {
     outline: none;
     font-size: 16px;
     background-color: #ffffff;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .form-field::placeholder {
-    color: #686868;
+    color: #a39f9f;
 }
 
 /* Botão */
@@ -82,7 +82,7 @@ body {
     font-size: 16px;
     border-radius: 8px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     transition: 0.3s;
 }
