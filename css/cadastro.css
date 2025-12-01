@@ -1,0 +1,103 @@
+/* Fundo geral */
+body {
+    background-image: url('/foto\ academia.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1e1e1e;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* Área principal */
+.cadastro-bg {
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Grid principal */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+/* Título */
+.main-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Caixa do formulário */
+.form-box {
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+.form-field {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.form-field::placeholder {
+    color: #bbbbbb;
+}
+
+/* Botão */
+.btn-enviar {
+    display: inline-block;
+    width: 100%;
+    background-color: #e31e24;
+    text-align: center;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #b91c1f;
+}
+
+/* Ajuste para espaçamento do título no mobile */
+.texto {
+    padding-top: 20px;
+}
+
+@media (min-width: 1024px) {
+    .texto {
+        padding-top: 0;
+    }
+}
